@@ -262,3 +262,33 @@ margin-top:40px;
     border-radius:10px;
 
 }
+
+.poke-images {
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin:40px 0;
+
+}
+
+
+.poke-images img {
+
+    width:800px;
+    height:550px;
+    object-fit:cover;
+    border-radius:10px;
+
+}
+
+.poke-videos {
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+
+}
