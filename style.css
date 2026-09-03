@@ -1,294 +1,567 @@
-body {
+/* =================================
+   BASE
+================================= */
 
-    margin:0;
-    font-family: Arial, sans-serif;
-
-    background:#111;
-    color:white;
-
+* {
+    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    line-height: 1.6;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00aaff;
+}
 
 header {
+    background: #050505;
+    padding: 30px;
+    text-align: center;
+}
 
-    background:#050505;
-    padding:30px;
-    text-align:center;
+header h1 {
+    margin: 0 0 15px;
+}
 
+nav a {
+    margin: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00aaff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #050505;
 }
 
 .end {
-
-    padding:50px;
-    text-align:center;
-
+    padding: 50px;
+    text-align: center;
 }
 
 
-
-nav a {
-
-    color:white;
-    margin:15px;
-    text-decoration:none;
-
-}
-
-
-nav a:hover {
-
-    color:#00aaff;
-
-}
-
-
-
-.hero {
-
-    padding:100px 20px;
-    text-align:center;
-
-}
-
-
+/* =================================
+   GENERAL SECTIONS
+================================= */
 
 section {
-
-    padding:50px;
-
+    padding: 50px;
 }
-
-
-
-.cards {
-
-    display:flex;
-    flex-wrap:wrap;
-    gap:30px;
-
-}
-
-
-
-.card {
-
-    background:#222;
-    width:300px;
-    padding:20px;
-
-    border-radius:10px;
-
-}
-
-
-
-.card img {
-
-    width:100%;
-    height:170px;
-    object-fit:cover;
-
-}
-
-
-
-.card:hover {
-
-    transform:scale(1.05);
-    transition:0.3s;
-
-}
-
-
-
-a {
-
-    color:white;
-    text-decoration:none;
-
-}
-
-
-
-ul {
-
-    line-height:2;
-
-}
-
-
-
-footer {
-
-    text-align:center;
-    padding:20px;
-    background:#050505;
-
-}
-
-
-
-.role-media {
-
-display:flex;
-justify-content:center;
-gap:40px;
-margin:30px;
-
-}
-
-
-
-.role-media img {
-
-width:400px;
-height:250px;
-object-fit:cover;
-border-radius:10px;
-
-}
-
-
-
-.role-media video {
-
-width:400px;
-height:250px;
-
-}
-
-
-
-.conclusion {
-
-background:#222;
-padding:30px;
-border-radius:15px;
-margin-top:40px;
-
-}
-
-
-/* Pages projets */
 
 .project {
-
-    width:80%;
-    margin:auto;
-    padding:50px;
-
+    width: 80%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 50px 0;
 }
 
 
-.screenshots {
+/* =================================
+   PROJECT TEXT
+================================= */
 
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-    margin:40px;
-
+.pitch,
+.asset-intro {
+    width: 90%;
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 0;
 }
 
+.pitch h2,
+.asset-intro h2 {
+    font-size: 42px;
+    margin: 0 0 30px;
+}
+
+.pitch h3,
+.asset-intro h3 {
+    font-size: 28px;
+    margin: 50px 0 20px;
+}
+
+.pitch p,
+.asset-intro p,
+.role p,
+.technologies li,
+.bubble-technologies li {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.role,
+.technologies,
+.bubble-role,
+.bubble-technologies {
+    width: 90%;
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 0;
+}
+
+.role h2,
+.technologies h2,
+.bubble-role h2,
+.bubble-technologies h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+ul {
+    line-height: 2;
+}
+
+
+/* =================================
+   PROJECT IMAGES
+================================= */
 
 .pitch img {
-
-    width:960 px;
-    height:540px;
-    object-fit:cover;
-    border-radius:10px;
-
-
+    display: block;
+    width: 960px;
+    max-width: 100%;
+    height: 540px;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
+.screenshots {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 50px 0 100px;
+    padding: 0;
+}
 
 .screenshots img {
-
-    width:960 px;
-    height:540px;
-    object-fit:cover;
-    border-radius:10px;
-
+    width: 600px;
+    height: 340px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
+
+/* =================================
+   PROJECT VIDEOS
+================================= */
 
 .trailer {
-
-    text-align:center;
-
+    text-align: center;
+    margin: 70px 0 100px;
+    padding: 0;
 }
 
+.trailer h2 {
+    margin-bottom: 40px;
+}
 
 .trailer video {
-
-    width:1000px;
-    max-width:90%;
-
+    display: block;
+    width: 1000px;
+    max-width: 90%;
+    margin: auto;
+    border-radius: 10px;
 }
 
 .feature-videos {
-
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
     margin: 40px 0;
-
 }
 
 .small-video {
-
     width: 600px;
+    max-width: 100%;
     border-radius: 10px;
-
 }
+
+
+/* Kept for older pages / compatibility */
 
 .feature-images {
-
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-    margin:40px 0;
-
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 50px 0 100px;
 }
 
-
 .feature-images img {
-
-    width:600px;
-    height:250px;
-    object-fit:cover;
-    border-radius:10px;
-
+    width: 600px;
+    height: 340px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .poke-images {
-
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-    margin:40px 0;
-
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 50px 0 100px;
 }
 
-
 .poke-images img {
-
-    width:800px;
-    height:550px;
-    object-fit:cover;
-    border-radius:10px;
-
+    width: 600px;
+    height: 340px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .poke-videos {
-
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
     margin: 40px 0;
+}
 
+
+/* =================================
+   CONCLUSION
+================================= */
+
+.conclusion {
+    background: #222;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 80px auto 50px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.conclusion h2 {
+    margin-top: 0;
+}
+
+.conclusion p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =================================
+   HOME PAGE
+================================= */
+
+.home-hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.home-hero-content {
+    max-width: 900px;
+}
+
+.home-label,
+.home-card-category {
+    color: #00aaff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.home-hero h1 {
+    font-size: clamp(48px, 8vw, 90px);
+    margin: 15px 0;
+}
+
+.home-hero h2 {
+    font-size: clamp(24px, 4vw, 40px);
+    margin: 0 0 25px;
+}
+
+.home-description {
+    color: #ccc;
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.home-section {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 100px 0;
+}
+
+.home-section-title {
+    margin-bottom: 50px;
+}
+
+.home-section-title h2 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.home-section-title > p:last-child {
+    color: #aaa;
+    font-size: 18px;
+}
+
+.home-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.home-card {
+    width: auto;
+    padding: 0;
+    overflow: hidden;
+    background: #222;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.home-card:hover {
+    transform: translateY(-6px);
+    background: #292929;
+}
+
+.home-card img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.home-card-content {
+    padding: 25px;
+}
+
+.home-card-category {
+    margin: 0 0 10px;
+}
+
+.home-card h3 {
+    font-size: 26px;
+    margin: 0 0 12px;
+}
+
+.home-card-content > p:not(.home-card-category) {
+    color: #bbb;
+}
+
+.home-card-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00aaff;
+    font-weight: bold;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    background: #222;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.skill-item h3 {
+    margin-top: 0;
+}
+
+.skill-item p {
+    color: #aaa;
+}
+
+.home-contact {
+    background: #050505;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.home-contact-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.home-contact h2 {
+    font-size: 42px;
+}
+
+.home-contact p {
+    color: #bbb;
+    font-size: 18px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.contact-links a,
+.contact-links p {
+    margin: 0;
+}
+
+
+/* =================================
+   BUBBLE SWAP
+================================= */
+
+.bubble-role {
+    max-width: 1000px;
+}
+
+.bubble-feature {
+    margin-bottom: 100px;
+}
+
+.bubble-feature h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.bubble-feature p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+    .project {
+        width: 90%;
+    }
+
+    .home-cards,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pitch h2,
+    .asset-intro h2,
+    .home-section-title h2,
+    .home-contact h2 {
+        font-size: 34px;
+    }
+
+    .pitch img {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 25px 15px;
+    }
+
+    nav a {
+        margin: 8px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .project {
+        width: 100%;
+        padding: 30px 0;
+    }
+
+    .screenshots,
+    .feature-images {
+        width: 95%;
+        margin: 40px auto 70px;
+    }
+
+    .screenshots img,
+    .feature-images img,
+    .poke-images img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .trailer {
+        margin: 50px 0 70px;
+    }
+
+    .trailer video {
+        width: 95%;
+        max-width: 95%;
+    }
+
+    .pitch,
+    .asset-intro,
+    .role,
+    .technologies,
+    .bubble-role,
+    .bubble-technologies {
+        width: 90%;
+    }
+
+    .pitch p,
+    .asset-intro p,
+    .role p,
+    .conclusion p,
+    .bubble-feature p {
+        font-size: 16px;
+    }
+
+    .home-hero {
+        min-height: 60vh;
+        padding: 80px 20px;
+    }
+
+    .home-section {
+        width: 90%;
+        padding: 70px 0;
+    }
+
+    .home-card img {
+        height: 220px;
+    }
+
+    .contact-links {
+        gap: 20px;
+    }
 }
